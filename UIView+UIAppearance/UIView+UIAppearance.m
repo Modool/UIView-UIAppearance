@@ -86,10 +86,6 @@
     return [super forwardingTargetForSelector:aSelector];
 }
 
-- (void)doesNotRecognizeSelector:(SEL)aSelector;{
-    
-}
-
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector{
     return [[self appearance] methodSignatureForSelector:aSelector];
 }
@@ -118,7 +114,9 @@
     NSParameterAssert(instance);
     NSParameterAssert([[instance class] conformsToProtocol:@protocol(UIAppearance)]);
     
-    [[self mutableInstances] addObject:instance];
+    if ([instance allowSynchronizeAppreance]) {
+        [[self mutableInstances] addObject:instance];
+    }
 }
 
 @end
