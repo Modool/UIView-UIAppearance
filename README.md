@@ -1,2 +1,2 @@
 # UIView-UIAppearance
-UIView+UIAppearanceSynchronization
+UIView-UIAppearance
