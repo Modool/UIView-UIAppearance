@@ -63,7 +63,7 @@ static NSUInteger count = 1;
 - (IBAction)didClickAdd:(id)sender{
     
     UITestLabel *textLabel = [[UITestLabel alloc] initWithFrame:CGRectMake(50, 10 + count * 50, 200, 40)];
-    textLabel.text = [NSString stringWithFormat:@"test%d", count];
+    textLabel.text = [NSString stringWithFormat:@"test%lu", count];
     textLabel.font = [UIFont systemFontOfSize:20];
     count++;
     
