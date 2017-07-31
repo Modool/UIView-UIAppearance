@@ -120,7 +120,7 @@
 
 @end
 
-static void UIViewSwizzleMethod(Class class, SEL origSel, SEL altSel){
+static void UIView_UIAppearanceMethodSwizzle(Class class, SEL origSel, SEL altSel){
     Method origMethod = class_getInstanceMethod(class, origSel);
     Method altMethod = class_getInstanceMethod(class, altSel);
     
@@ -135,8 +135,8 @@ static void UIViewSwizzleMethod(Class class, SEL origSel, SEL altSel){
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        UIViewSwizzleMethod(object_getClass((id)self), @selector(allocWithZone:), @selector(swizzle_allocWithZone:));
-        UIViewSwizzleMethod(object_getClass((id)self), @selector(appearance), @selector(swizzle_appearance));
+        UIView_UIAppearanceMethodSwizzle(object_getClass((id)self), @selector(allocWithZone:), @selector(swizzle_allocWithZone:));
+        UIView_UIAppearanceMethodSwizzle(object_getClass((id)self), @selector(appearance), @selector(swizzle_appearance));
     });
 }
 
