@@ -6,7 +6,6 @@
 //  Copyright © 2017年 Marike Jave. All rights reserved.
 //
 #import <objc/runtime.h>
-#import <JRSwizzle/JRSwizzle.h>
 #import "UIView+UIAppearance.h"
 
 @interface UIAppearanceHooker : NSObject
@@ -121,13 +120,23 @@
 
 @end
 
+static void UIViewSwizzleMethod(Class class, SEL origSel, SEL altSel){
+    Method origMethod = class_getInstanceMethod(class, origSel);
+    Method altMethod = class_getInstanceMethod(class, altSel);
+    
+    class_addMethod(class, origSel, class_getMethodImplementation(class, origSel), method_getTypeEncoding(origMethod));
+    class_addMethod(class, altSel, class_getMethodImplementation(class, altSel), method_getTypeEncoding(altMethod));
+    
+    method_exchangeImplementations(class_getInstanceMethod(class, origSel), class_getInstanceMethod(class, altSel));
+}
+
 @implementation UIView (UIAppearance)
 
-+ (void)load{
++ (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [self jr_swizzleClassMethod:@selector(allocWithZone:) withClassMethod:@selector(swizzle_allocWithZone:) error:nil];
-        [self jr_swizzleClassMethod:@selector(appearance) withClassMethod:@selector(swizzle_appearance) error:nil];
+        UIViewSwizzleMethod(object_getClass((id)self), @selector(allocWithZone:), @selector(swizzle_allocWithZone:));
+        UIViewSwizzleMethod(object_getClass((id)self), @selector(appearance), @selector(swizzle_appearance));
     });
 }
 

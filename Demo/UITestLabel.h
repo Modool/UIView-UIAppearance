@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Marike Jave. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <UIView_UIAppearance/UIView+UIAppearance.h>
 
 @interface UITestLabel : UILabel
 
