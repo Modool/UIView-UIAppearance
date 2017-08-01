@@ -1,4 +1,4 @@
-# UIView-UIAppearance
+# UIView+UIAppearance
 
 [![](https://img.shields.io/travis/rust-lang/rust.svg?style=flat)](https://github.com/Modool)
 [![](https://img.shields.io/badge/language-Object--C-1eafeb.svg?style=flat)](https://developer.apple.com/Objective-C)
@@ -13,7 +13,7 @@
 
 ## How To Get Started
 
-* Download `UIView-UIAppearance` and try run example app
+* Download `UIView+UIAppearance` and try run example app
 
 ## Communication
 
@@ -27,11 +27,11 @@
 * Installation with CocoaPods
 
 ```
-source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/Modool/cocoapods-specs.git'
 platform :ios, '8.0'
 
 target 'TargetName' do
-pod 'UIView-UIAppearance', '~> 1.0'
+pod 'UIView+UIAppearance', '~> 1.0'
 end
 
 ```
@@ -39,13 +39,13 @@ end
 * Installation with Carthage
 
 ```
-github "UIView-UIAppearance/UIView-UIAppearance" ~> 1.0
+github "UIView+UIAppearance/UIView+UIAppearance" ~> 1.0
 ```
 
 * Manual Import
 
 ```
-drag “UIView-UIAppearance” directory into your project
+drag “UIView+UIAppearance” directory into your project
 
 ```
 
@@ -55,43 +55,15 @@ drag “UIView-UIAppearance” directory into your project
 
 ## Architecture
 
-### AnimatedTransitioning
-
-* `<UIViewControllerAnimatedTransitioning>`
-	* `<MDViewControllerAnimatedTransitioning>`
-		* `<MDNavigationAnimatedTransitioning>`
-		* `<MPresentionAnimatedTransitioning>`
-	* `MDNavigationAnimationController`
-	* `MDPresentionAnimationController`
-
-### InteractiveController
-
-* `<MDNavigationPopController>`
-* `<MDPresentionController>`
-* `<MDInteractionController>`
-* `MDSwipeInteractionController`
-* `MDPopInteractionController`
-* `UIViewController+MDNavigationTransitioning`
-* `UIViewController+MDPresentionTransitioning`
-
-### ImageViewController
-	
-* `AnimatedTransitioning`
-	* `MDImageZoomAnimationController`
-* `InteractiveTransition`
-	* `MDImageDismissInteractionController`
-	* `MDImageDraggingDismissInteractionController`
-* `MDImageViewController`
-	
 ## Usage
 
 * Demo FYI 
 
 ## Update History
 
-* 2017.7.30 Add README and adjust project class name.
+* 2017.7.31 Add README and adjust project class name.
 
 
 
 ## License
-`UIView-UIAppearance` is released under the MIT license. See LICENSE for details.
+`UIView+UIAppearance` is released under the MIT license. See LICENSE for details.
