@@ -8,7 +8,7 @@
 
 ## Introduction
 
-- This framework base on <a href="https://github.com/Modool/UIView-UIAppearanceSynchronization"> UIView+UIAppearanceSynchronization </a>.
+- This framework base on <a href="https://github.com/Modool/UIView-UIAppearance-Private"> UIView+UIAppearance+Private </a>.
 - It's dedicated to implementing multi-theme solutions with the implementation of the system.
 - The system solution is flawed, which can't synchronous theme for these views is being displayed.
 - It's an extension for UIAppearance protocol.
