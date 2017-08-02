@@ -58,6 +58,7 @@
 		0852D21F1F2B26E600C438EA /* UIView+UIAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIAppearance.h"; sourceTree = "<group>"; };
 		0852D2201F2B26E600C438EA /* UIView+UIAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIAppearance.m"; sourceTree = "<group>"; };
 		087221EC1F2F33F4001AB008 /* UIView_UIAppearance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIView_UIAppearance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		087E707E1F3189D20076217D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08CDC0CC1D565370008ADCF6 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -101,6 +102,7 @@
 		0852D21E1F2B26E600C438EA /* UIView+UIAppearance */ = {
 			isa = PBXGroup;
 			children = (
+				087E707E1F3189D20076217D /* Info.plist */,
 				0852D21F1F2B26E600C438EA /* UIView+UIAppearance.h */,
 				0852D2201F2B26E600C438EA /* UIView+UIAppearance.m */,
 			);
@@ -307,6 +309,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "UIView+UIAppearance/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -333,6 +336,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "UIView+UIAppearance/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

@@ -8,18 +8,13 @@
 
 ## Introduction
 
-- Animation based with transtion, easy to custom gesture control by developer.
-- Quick Integrate global gesture, sideslip or local animation
+- This framework is dedicated to implementing multi-theme solutions with the implementation of the system.
+- The system solution is flawed, which can't synchronous theme for these views is being displayed.
+- This is an extension for UIAppearance protocol.
 
 ## How To Get Started
 
 * Download `UIView+UIAppearance` and try run example app
-
-## Communication
-
-* QQ群：<img src="./images/qq.png" width=200>
-* 微信群：<img src="./images/wechat.jpeg" width=200>
-* Github：<img src="./images/github.png" width=200>
 
 ## Installation
 
@@ -39,7 +34,7 @@ end
 * Installation with Carthage
 
 ```
-github "UIView+UIAppearance/UIView+UIAppearance" ~> 1.0
+github "Modool/UIView-UIAppearance" ~> 1.0
 ```
 
 * Manual Import
@@ -49,21 +44,37 @@ drag “UIView+UIAppearance” directory into your project
 
 ```
 
-
 ## Requirements
 - Requires ARC
 
 ## Architecture
+### UIView (UIAppearance)
+* `hook methods`
+	* `allocWithZone:` 
+	* `appearance`
+
+### UIAppearanceHooker
+* `properties`
+	* `appearance` storage of current instance of _UIAppearance
+	* `appearanceViewClass` storage of current view class
+	* `appearanceInvocations` storage of invocations of appearance properties of view class 
+	* `mutableInstances` storage of instances of view class 
+* `methods`
+	* `methodForSelector:`  transmition of method implementation
+	* `forwardInvocation:` 	transmition of invocation
+	* `forwardingTargetForSelector:` transmition of forwarding target
+	* `methodSignatureForSelector:` ****transmition of method signature
+	* `respondsToSelector:` 
 
 ## Usage
 
 * Demo FYI 
 
-## Update History
-
-* 2017.7.31 Add README and adjust project class name.
-
-
-
 ## License
 `UIView+UIAppearance` is released under the MIT license. See LICENSE for details.
+
+## Communication
+
+<img src="./images/qq.png" width=200>
+<img style="margin:0px 50px 0px 50px" src="./images/wechat.jpeg" width=200>
+<img src="./images/github.png" width=200>
