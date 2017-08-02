@@ -28,7 +28,6 @@ platform :ios, '8.0'
 target 'TargetName' do
 pod 'UIView+UIAppearance', '~> 1.0'
 end
-
 ```
 
 * Installation with Carthage
@@ -63,7 +62,7 @@ drag “UIView+UIAppearance” directory into your project
 	* `methodForSelector:`  transmition of method implementation
 	* `forwardInvocation:` 	transmition of invocation
 	* `forwardingTargetForSelector:` transmition of forwarding target
-	* `methodSignatureForSelector:` ****transmition of method signature
+	* `methodSignatureForSelector:` transmition of method signature
 	* `respondsToSelector:` 
 
 ## Usage
