@@ -8,9 +8,10 @@
 
 ## Introduction
 
-- This framework is dedicated to implementing multi-theme solutions with the implementation of the system.
+- This framework base on <a href="https://github.com/Modool/UIView-UIAppearanceSynchronization"> UIView+UIAppearanceSynchronization </a>.
+- It's dedicated to implementing multi-theme solutions with the implementation of the system.
 - The system solution is flawed, which can't synchronous theme for these views is being displayed.
-- This is an extension for UIAppearance protocol.
+- It's an extension for UIAppearance protocol.
 
 ## How To Get Started
 
