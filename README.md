@@ -76,5 +76,5 @@ drag “UIView+UIAppearance” directory into your project
 ## Communication
 
 <img src="./images/qq.png" width=200>
-<img style="margin:0px 50px 0px 50px" src="./images/wechat.jpeg" width=200>
+<img style="margin:0px 20px 0px 20px" src="./images/wechat.jpeg" width=200>
 <img src="./images/github.png" width=200>
